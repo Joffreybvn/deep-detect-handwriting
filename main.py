@@ -67,12 +67,12 @@ with col2:
     st.markdown("Your drawing is resized and gray-scaled")
 
     # Display the transformed image
-    if image.array is not None:
+    if image.image is not None:
         st.image(image.get_streamlit_displayable(), width=290)
 
 
 # Check if the user has written something
-if (image.array is not None) and (not image.is_empty()):
+if (image.image is not None) and (not image.is_empty()):
 
     # Get the predicted class
     prediction = model.predict(image.get_prediction_ready())
